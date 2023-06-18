@@ -131,11 +131,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="algorithm.cpp" />
     <ClCompile Include="blocks.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Viewer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="algorithm.h" />
     <ClInclude Include="blocks.h" />
     <ClInclude Include="sound_effect.h" />
     <ClInclude Include="Viewer.h" />

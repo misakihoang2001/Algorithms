@@ -82,5 +82,19 @@ float Blocks::operator[](int i) {
 	counter.s++;
 	float val = items[i];
 	sound.play(0, 0.5 + 1 * val / max_val);
-
+	std::this_thread::sleep_for(std::chrono::microseconds(r_delay));
+	return val;
 }
+
+void Blocks::operator()(int dest, int val) {
+	if (dest >= amount) {
+		std::cout << "Out of bond value " << dest << "Selected!";
+		return;
+	}
+
+	counter.w++;
+	sound.play(0.05, 0.5 + 0.45 * val / max_val);
+	std::this_thread::sleep_for(std::chrono::microseconds(w_delay));
+	items[dest] = val;
+}
+
